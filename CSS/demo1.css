@@ -1,0 +1,23 @@
+h1{
+    color: red;/*kiểu chữ*/
+}
+p{
+    /*color: green;*/
+    /*color: rgb(0,255,0);*/
+    color: #192b19; /*kiểu hexa*/
+    font-size: 18px;/*cỡ chữ*/
+    font-weight: 400; /* độ đậm của chữ: 100-thin, 300-light, 400-nomal, 500-medium, 600-semi-bold, 700-bold, 800-extra-bold, 900-black*/
+    text-align: juftify; /*left, center -right - juftify */
+    line-height: 1.5; /*-> 1.5x15px == 22.5px(line-height: 22.5px; độ cao của dòng)*/
+    font-family: "Times New Roman"; /*kiểu chữ*/
+    text-decoration: none;/* none( không gi cả), underline(gạch dưới), line-through(gach giữa), overline(gạch trên đầu)*/
+    text-indent: 20px;/*lùi đầu dòng*/
+    width:800px;/*độ rộng của khối*/
+    background-color: #71A971FF;/* màu nền của chữ */
+    border-bottom: 10px solid #38d038; /*độ dày mỏng của gạch dưới của nền, + màu gạch dưới, kiểu gạch dưới( có: solid, dashed*/
+
+}
+a{
+    text-decoration: none;
+    text-transform: none;/*uppercase, lower, capitalize, none*/
+}

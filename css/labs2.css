@@ -17,3 +17,6 @@ p{
 div{
     text-align: right;
 }
+ul{
+    list-style-type:none !important;
+}

@@ -1,0 +1,18 @@
+h3{
+    color: red;
+    text-decoration: underline;
+    font-size: 20px;
+}
+table{
+    line-height: 1.0;
+    width: 800px;
+    border-bottom: 1px dashed #192b19;
+}
+p{
+    text-align:left;
+    border-bottom: 1px dashed #192b19;
+    width: 800px;
+}
+div{
+    text-align: right;
+}

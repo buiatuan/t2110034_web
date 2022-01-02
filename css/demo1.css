@@ -15,6 +15,9 @@ p{
     width:800px;/*độ rộng của khối*/
     background-color: #71A971FF;/* màu nền của chữ */
     border-bottom: 10px solid #38d038; /*độ dày mỏng của gạch dưới của nền, + màu gạch dưới, kiểu gạch dưới( có: solid, dashed*/
+    padding: 5px; /* khoảng cách giữa đường viền và chữ */
+    margin: 20px ; /* xác định lề bên ngaoif đường viền */
+
 
 }
 a{

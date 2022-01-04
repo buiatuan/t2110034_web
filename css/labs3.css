@@ -1,0 +1,44 @@
+body{
+    background-image: url("../imgs/lab3_background.jpg");
+    background-size: cover;
+
+}
+#main{
+    padding-top: 100px;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+.top{
+    text-align: center;
+    background-color: #c5d0d0;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    padding-left: 250px;
+    margin-top: -50px;
+
+}
+.right{
+    background-color: #eae9e9;
+    text-align: justify;
+    margin-top: -700px;
+    padding-left: 400px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    padding-top: 40px;
+}
+.left{
+    background-color: #dad2d2;
+    width: 300px;
+    margin-top: -200px;
+    margin-left: 40px;
+    padding-left: 20px;
+}
+figure{
+    float: top;
+}
+.gach{
+    border-bottom: 1px solid black;
+}
+a{
+    float: top;
+}

@@ -1,0 +1,71 @@
+*{
+    /* tác động đến mọi phần tử*/
+}
+body{
+    background-color: #fafafa;
+    color: #242424;
+    font-size: 14px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif; /* font back up */
+    text-align: left; /* căn chỉnh chữ */
+}
+div{
+    width: 350px;
+    height: 400px;
+    /*border: 1px solid #385838; */
+    /*
+    border-top
+    border-left
+    border-bottom
+    border-right
+     */
+    float: left; /* left right none - dồn khối */
+    margin: 10px 10px; /* khoảng cách từng phần tử ra bên ngoài (có thể âm) */
+    /*
+    margin-top
+    margin-left
+    margin-right
+    margin-bottom
+    1. giá trị đầu luôn là top
+    2. nhập giá trị theo chiều kim đồng hồ
+    3. giá trị thiếu sẽ lấy chiều ngược của nó
+     */
+    padding: 15px; /* khoảng cách từ đường viền đi vào nội dung */
+    box-sizing: border-box; /* khóa độ lớn 1 khối content-box */
+    border-radius: 5px; /* cắt góc của khối  thay 5px = 100% thì sẽ là hình tròn*/
+    box-shadow: 5px 10px 15px blue;
+    /* blue: màu sắc độ mờ
+        5px: độ rộng bóng mờ
+        5 10 : góc chiếu thẳng
+
+     */
+    background-color: #aaaaaa;
+}
+img{
+    max-width: 100%; /* nếu ảnh bé hơn khung thì giữ nguyên, to hơn thì co nhỏ lại */
+}
+#tech{
+    background-color: #EEE8AA; /* mỗi id chỉ sửu dụng một phần tử */
+}
+.barca{
+    background-color: azure;
+}
+#tech p{
+    color: green;
+}
+.barca p{
+    color: aqua;
+}
+/* thứ tự ưu tác dụng của CSS:
+1. thứ tự xuất hiên: xuất hiện sau cao hơn
+2. cha con --> thẻ
+3. dùng class
+4. cấu trúc cha con --> class
+5. id
+6 cha con --. id
+ */
+.abc{
+    background-image: url("../imgs/anhthu1.jpeg");
+    background-size: cover;
+}

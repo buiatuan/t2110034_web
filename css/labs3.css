@@ -1,44 +1,58 @@
-body{
-    background-image: url("../imgs/lab3_background.jpg");
-    background-size: cover;
+html{
+    background-color: #9f97af;
+}
+.top {
+    background-color: #aab6b6;
 
-}
-#main{
-    padding-top: 100px;
-    padding-left: 250px;
-    padding-right: 250px;
-}
-.top{
-    text-align: center;
-    background-color: #c5d0d0;
-    padding-top: 50px;
-    padding-bottom: 40px;
-    padding-left: 250px;
-    margin-top: -50px;
-
-}
-.right{
-    background-color: #eae9e9;
-    text-align: justify;
-    margin-top: -700px;
-    padding-left: 400px;
-    padding-right: 25px;
-    padding-bottom: 10px;
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
     padding-top: 40px;
+    padding-bottom: 30px;
+    padding-left: 400px;
+    box-sizing: border-box;
+}
+.bottom{
+
 }
 .left{
-    background-color: #dad2d2;
-    width: 300px;
-    margin-top: -200px;
-    margin-left: 40px;
+    background-color: #eae8e8;
+    width: 260px;
+    height: 100%;
+    padding-top: 10px;
     padding-left: 20px;
+    padding-bottom: 10px;
+    margin-left: 250px;
+    margin-top: -1117px;
+    box-sizing: border-box;
 }
-figure{
-    float: top;
+.right{
+    background-color: #efeff3;
+    text-align: justify;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: -18px;
+    padding-left: 350px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
 }
-.gach{
-    border-bottom: 1px solid black;
+.avartar{
+    background-color: #aab6b6;
+    width: 140px;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-radius: 100%;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.line{
+    border-bottom: 1px solid;
+    padding-bottom: 20px;
 }
 a{
-    float: top;
+
 }
+

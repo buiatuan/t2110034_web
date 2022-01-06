@@ -60,4 +60,7 @@ html{
     float: top;
     padding-left: 30px;
 }
+a{
+    text-decoration: none;
+}
 

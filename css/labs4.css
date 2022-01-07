@@ -36,6 +36,12 @@ img{
     width: 100%;
     height: 400px;
 }
+.bottom div:hover{
+    transform: scale(1.5);
+}
+.black div:hover{
+    transform: none;
+}
 .bottom h3{
     text-transform: uppercase;
     text-align: center;

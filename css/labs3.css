@@ -64,6 +64,9 @@ img{
     height: 150px;
     border-radius: 100%;
 }
+.avartar img:hover{
+    transform: scale(2.0);
+}
 .left .block h3{
     font-size: 25px;
     text-transform: uppercase;
@@ -77,6 +80,9 @@ img{
     float: left;
     width: 100%;
     margin: 10px;
+}
+.contact li:hover{
+    transform: scale(1.1);
 }
 .contact li img{
     float: left;
@@ -104,7 +110,6 @@ img{
 }
 .contact a:hover{
     color: red;
-
 }
 .left .education{
     font-weight: 400;

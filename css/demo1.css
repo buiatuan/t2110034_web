@@ -10,7 +10,7 @@ p{
     text-align: juftify; /*left, center -right - juftify */
     line-height: 1.5; /*-> 1.5x15px == 22.5px(line-height: 22.5px; độ cao của dòng)*/
     font-family: "Times New Roman"; /*kiểu chữ*/
-    text-decoration: none;/* none( không gi cả), underline(gạch dưới), line-through(gach giữa), overline(gạch trên đầu)*/
+    text-decoration: line-through;/* none( không gi cả), underline(gạch dưới), line-through(gach giữa), overline(gạch trên đầu)*/
     text-indent: 20px;/*lùi đầu dòng*/
     width:800px;/*độ rộng của khối*/
     background-color: #71A971FF;/* màu nền của chữ */

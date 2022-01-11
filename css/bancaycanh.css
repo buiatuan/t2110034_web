@@ -143,6 +143,7 @@ img{
     width: 100%;
     background-color: #ffffff;
     margin-top: 40px;
+    padding-bottom: 20px;
 }
 .mid-content{
     float: none;
@@ -197,4 +198,38 @@ img{
 .row-list-product sup{
     text-decoration: underline;
 }
-
+.line-main{
+    float: left;
+    width: 100%;
+    background-color: #75c321;
+    color: white;
+}
+.line-main h2{
+    text-align: center;
+    line-height: 1.8;
+    font-size: 25px;
+    padding-top: 20px;
+}
+.line-main p{
+    text-align: center;
+    line-height: 1.5;
+    padding-bottom: 10px;
+}
+.hotline{
+    border: 2px solid #fafafa;
+    float: left;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 450px;
+    border-radius: 5%;
+    transition: 400ms;
+}
+.hotline:hover{
+    background-color: #fafafa;
+    color: #192b19;
+}
+.line-main h3{
+    text-align: center;
+    font-size: 25px;
+}

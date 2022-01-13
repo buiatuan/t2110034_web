@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LabS5</title>
+    <link rel="stylesheet" href="css/labs5.css"/>
+</head>
+<body>
+<section>
+    <div class="container">
+        <div class="background">
+            <form method="get" action="#">
+                <h3>Create task</h3>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Type" required/>
+                </div>
+                <div class="form-group">
+                    <div class="select">
+                        <select class="select-left" name="Company" required>
+                            <option value="">Company</option>
+                            <option value="hh">Hoàng Hà</option>
+                            <option value="tl">Thăng Long</option>
+                            <option value="vp">VinFast</option>
+                            <option value="kd">King Đô</option>
+                        </select>
+                    </div>
+                    <div class="select">
+                        <select class="select-right" name="Opportuniity">
+                            <option value="">Opportunity</option>
+                            <option value="hh">Hoàng Hà</option>
+                            <option value="tl">Thăng Long</option>
+                            <option value="vp">VinFast</option>
+                            <option value="kd">King Đô</option>
+                        </select>
+                        <p>optional</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Task Name" required/>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="CC"/>
+                    <p id="optional">optional</p>
+                </div>
+                <div class="form-label">
+                    <h4>Nature of request</h4>
+                    <label><input type="checkbox" name="confirm" value="Adsreview"/>Ads review</label>
+                    <label><input type="checkbox" name="comfirm" value="Keywordsreview"/>Keywords review</label>
+                    <label><input type="checkbox" name="confirm" value="Extensionsreview"/>Extensions review</label>
+                </div>
+                <div class="form-label">
+                    <h4>Current reviewable status</h4>
+                    <label><input type="radio" name="gender" value="Approved"/>Approved</label>
+                    <label><input type="radio" name="gender" value="NotApproved"/>Not Approved</label>
+                </div>
+                <div class="form-group button">
+                    <button type="submit">Sumbit</button>
+                    <button type="reset">Reset</button>
+                    <button type="button">Button</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+</body>
+</html>

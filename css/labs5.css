@@ -6,10 +6,13 @@
 body{
     background-color: #e5e5e5;
 }
+.form-group{
+    width: 100%;
+    /*float: left;*/
+}
 .container{
     float: none;
     width: 800px;
-    height: 100%;
     margin: 50px auto;
 }
 .background{
@@ -25,9 +28,6 @@ body{
     line-height: 1.5;
     font-weight: 500;
     padding-bottom: 10px;
-}
-.form-group{
-    width: 100%;
 }
 .form-control{
     width: 100%;
@@ -83,7 +83,6 @@ body{
     float: left;
     padding-bottom: 20px;
     font-size: 18px;
-    letter-spacing: 1.5px;
 }
 .form-label label:hover{
     text-decoration: underline;

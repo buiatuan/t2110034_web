@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo JS</title>
+</head>
+<body>
+<script type="text/javascript" src="js/demo_js.js">
+    //code ở đây sẽ không chạy nếu đã gọi src 1 file js khác
+</script>
+    <script type="text/javascript">
+        // code js viet o day
+        var x; // khai báo 1 biến x nếu chỉ khai báo thì chưa hề có ô nhớ
+        x = 10; // khi này x mới co ô nhớ và chứa giá trị 10 ở trong => tự động có kiểu dữ liệu luôn
+        /* dynamic datatype
+            có 6 loại dữ liệu
+            - Number
+            - String
+            - Boolean (True/false)
+            - Array
+            - Object
+            - Function
+            ==> biến có thể tự động thay đổi loại dữ liệu khi thay đổi giá trị của ô nhớ
+         */
+        x = "hello"; // x biến thành 1 string
+        console.log(x); // print x ra màn hình
+        var y= 20;
+        if(y > 10 ){
+            console.log(y);
+        }else{
+            console.log(y+10);
+        }
+        switch (y) {
+            case 20: console.log("case 20");
+        }
+        for(var i=0;i<=y;i++){
+            console.log("i = "+i);
+        }
+        /*
+            number + number ==> number 10+10= 20
+            number+string => string. "hello" + 10 = hello10
+            string + string => string "hello" + "world" => "helloworld"
+         */
+        var arr = []; // khai báo arr là mọt mảng => kích thước vô hạn - kiểu dữ liệu của mỗi phần tử cũng không cố định
+        arr[0] = 12;
+        arr[1] = "hello";
+        arr[2] = [1,2,3,4];
+        arr[3] = 5;
+        for(var i=0;i<4;i++){
+            console.log(arr[i]);
+        }
+        // ex: có 4000usd , muốn 1m$, cho danh sách tiền trong tài khoản hàng năm vào trong mảng để in ra
+        var s=4000;
+        var tk = [];
+        //var y=0;
+        for(var i=0;s<1000000;i++){
+            s+=s*8/100;
+            tk[i] = s; // ghi nhận tài khỏa của mỗi năm được trả lãi.
+            //y++;
+        }
+        // in la xem hàng năm tài khoản thay đổi như thế nào.
+        for(var i=0;i<tk.length;i++){
+            // tk.length : kích thước của mảng tk[]
+            console.log(tk[i]);
+        }
+        var s1 = "abc", s2="abb"; // strcmp = string compare => <0: s1 trước s1; =0: nếu s1=s2 ; >0: nếu s1>s2 (theo alphabe)
+        if(s1>s2){
+            console.log("A");
+        }else{
+            console.log("B");
+        }
+        var strs = ["xin chao","hello","world","abc","xyz"]; // xăp xếp mảng theo thứ tự alphabe
+        /*var temp = 0;
+        for(var i = 0;i<(strs.length -1);i++){
+            for(var j=0;j<(strs.length-i-1);j++){
+                if(strs[j]>strs[j+1]){
+                    temp=strs[j];
+                    strs[j]=strs[j+1];
+                    strs[j+1]= temp;
+                }
+            }
+        }*/
+        strs.sort(); // strs.sort() == đoạn code trên :V .
+        for(var i=0;i<strs.length;i++){
+            console.log(strs[i]);
+        }
+        function tinhtong(a,b){ // không quan tâm có trả về hay không, cũng không quan tâm tham số kiểu dữ liệu gì.
+            return  a+b;
+        }
+        function inKetQua(a,b){
+            console.log(a+b);
+        }
+        var z = tinhtong(4,5);
+        var k = tinhtong("hello",4); // truyền tham số gì cũng được tính được thì tính, không tính được thì nó báo lỗi.
+        inKetQua(4,5);
+        inKetQua(4,"hello");
+        var d = function (){ // d là 1 function // cách gọi này là thì d: được gọi là 1 hàm ẩn danh ( thưởng dùng với 1 hàm chỉ muốn dùng 1 lần)
+            console.log("Xin chao cac ban");
+        }
+        d();
+
+        var e = ()=>{ // khai báo hàm theu kiểu arrow function .( viết ngắn hơn dùng trong trường hợp cũng không muốn đặt tên và viết hàm dài.)
+            console.log("EEEE");
+        }
+        e();
+
+    /*
+        alert("Cấm trẻ em dưới 18 tuổi"); // tạo 1 cảnh báo (alert: là một hàm có sẵn) - đây là một hàm void: không trả về gì cả.
+    */
+    /*  var b = confirm("Bạn chắc chắn muốn lấy cô này làm vợ"); // tạo một xác nhận - hàm này trả về true/false(boolean)
+        console.log(b); */
+       /* var c = prompt("Vui llòng nhập tên:"); // tạo một ô giá trị - string.
+        console.log(c); // c luôn luôn là string.*/
+        /*  if(c !=null || c!= ""){
+            alert("Xin Chào");
+        }*/
+        /*  do{
+            var c = prompt("Nhập vào tên  của bạn:");
+        }while(c == null || c == "");   */
+        // kể cả nhập 123 thì vẫn là string
+        // chuyển "123" thành số
+       // c = parseInt(c);
+    /*  "123" => 123
+        "12a3"=> 12
+        "a12"=> 12
+        "a12"=> Nan : Not a number  */
+
+    // Yêu cầu người dùng nhập vào 1 số
+    /*  do{
+            var c = prompt("Nhap vao 1 so:");
+            c=parseInt(c);
+        }while (isNaN(c));
+        console.log(c); */
+
+    // Bài tập: yêu cầu người dùng nhập vào 1 số từ 0 -> 99;
+    //     do{
+    //         var c = prompt("Nhập một số từ 0->99:");
+    //         c = parseInt(c);
+    //     }while (c<0 ||c>99 || isNaN(c));
+
+    //     setTimeout(function (){ // calback function
+    //         alert("cảnh báo");
+    //     },5000); // 5000 ms(5 giây) thời gian độ trễ cảnh báo
+    //     setInterval(function (){
+    //         alert("Hello");
+    //     },5000); // cứ sau 5s thì hàm sẽ calback
+    //     var count =0;
+    //     var it = setInterval(function (){
+    //         alert("Hello");
+    //         count++;
+    //         if(count >=2){
+    //             clearInterval(it); // xóa bỏ interval
+    //         }
+    //     },5000);
+
+        // bài tập: làm 1 đồng hồ đếm ngược 10 phút
+        // 10:00
+        //09:59
+        //09:58
+        //..
+        ///00.00
+        var min=10, sec=0;
+        var time = setInterval(function (){
+            // toán tử 3 ngôi
+           var m_txt = min<10?"0"+min:min; // bằng hàm ở dưới : ? ==if (: == else)
+           // var m_txt =min;
+           // if(min<10){
+           //     m_txt = "0"+min;
+           // }
+            var sec_txt = sec<10?"0"+sec:sec; // bằng hàm ở dưới
+           // var sec_txt = sec;
+           // if(sec<10){
+           //     sec_txt = "0"+sec;
+           // }
+           console.log(m_txt+":"+sec_txt);
+           sec--;
+           if(sec<0){
+               sec=59;
+               min--;
+           }
+           if(min<0){
+               clearInterval(time);
+           }
+        },1000);
+
+        //NHập 1 số từ 0 đến 99, sau đó tạo ngẫu nhiên 1 số từ 0-99, kiểm tra xem số mình chọn có phải số ngẫu nhiên hay không.
+
+        // số ngẫu nhiên từ 0-99
+        var r = Math.random(); // 1 số ngẫu nhiên từ 0->1
+        r = r*100; // (r>=0 $$ r<100)
+        r = parseInt(r); // r>=0 $$ r<=99
+
+        do{
+            var n = prompt("Nhap vao 1 so:");
+            n = parseInt(n);
+        }while(isNaN(n) || n<0 || n>99);
+        if(n==r){
+            alert("Chúc mừng bạn trúng giải");
+        }else{
+            alert("Chúc bạn may mắn vào ngày mai");
+        }
+
+    </script>
+</body>
+</html>

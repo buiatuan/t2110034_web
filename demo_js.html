@@ -140,10 +140,12 @@
 
     //     setTimeout(function (){ // calback function
     //         alert("cảnh báo");
-    //     },5000); // 5000 ms(5 giây) thời gian độ trễ cảnh báo
+    //     },5000); // 5000 ms(5 giây) sau 5s thì mới hiện thị thông báo.
+
     //     setInterval(function (){
     //         alert("Hello");
     //     },5000); // cứ sau 5s thì hàm sẽ calback
+
     //     var count =0;
     //     var it = setInterval(function (){
     //         alert("Hello");
@@ -187,14 +189,14 @@
 
         // số ngẫu nhiên từ 0-99
         var r = Math.random(); // 1 số ngẫu nhiên từ 0->1
-        r = r*100; // (r>=0 $$ r<100)
-        r = parseInt(r); // r>=0 $$ r<=99
-
+        r = r*100; // (r>=0 && r<100)
+        r = parseInt(r); // r>=0 && r<=99
+        // yêu cầu người dùng nhập 1 số >=0 && <=99
         do{
             var n = prompt("Nhap vao 1 so:");
             n = parseInt(n);
         }while(isNaN(n) || n<0 || n>99);
-        if(n==r){
+        if( n == r){
             alert("Chúc mừng bạn trúng giải");
         }else{
             alert("Chúc bạn may mắn vào ngày mai");

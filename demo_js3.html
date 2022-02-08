@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo JS3</title>
+  <link rel="stylesheet" href="css/demo_js.css"/>
+
+</head>
+<body>
+  <div class="box" onmouseenter="boxAction1()" onmouseleave="boxAction2()">
+
+  </div>
+  <input id="ips1" type="text" placeholder="Ho ten dem" onkeyup="inputAction1();typing1(this);" onkeydown="inputAction2()" onchange="inputAction3()"/>
+  <input id="ips2" type="text" placeholder="Ten" onkeyup="inputAction1();typing1(this);" onkeydown="inputAction2()" onchange="inputAction3()"/>
+  <span id="typing">Typing: </span>
+  <p id="content"></p>
+  <p class="ph">P1</p>
+  <p class="ph">P2</p>
+  <p class="ph">P3</p>
+
+  <script type="text/javascript">
+    // tạo object từ tag, class
+    var ps = document.getElementsByClassName("ph"); //ph là một mảng các object
+    for(var i=0;i<ps.length;i++){
+      ps[i].style.color = "red";
+    }
+    var ps1 = document.getElementsByTagName("p"); //ps1 la một mảng các object
+    var ps2 = document.querySelectorAll("p.ph"); // ps2 là một mảng các object : gọi theo phương pháp của css
+
+
+    function boxAction1(){
+      console.log("Action 111111....");
+    }
+    function boxAction2(){
+      console.log("Action 222222....");
+    }
+
+
+    var ips = document.getElementById("ips1");
+    var ips2 = document.getElementById("ips2");
+    var ct = document.getElementById("content");
+    var tp = document.getElementById("typing");
+
+    function typing1(elemment){
+      var v = elemment.value;
+      tp.innerText = "Typing: " +v;
+    }
+
+    function inputAction1(){
+      var v1 = ips.value;
+      var v2 = ips2.value;
+      // console.log("Keyup..." + v1);
+      ct.innerText = v1+" "+v2;
+    }
+    function inputAction2(){
+      var v = ips.value;
+      console.log("Keydown..." + v);
+    }
+    function inputAction3(){
+      var v = ips.value;
+      console.log("Chance..." + v);  // onchange: nhập xong dữ diệu thì nó mới hiện
+    }
+  </script>
+</body>
+</html>

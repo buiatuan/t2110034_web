@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">/
+    <title>Demo JS 18/1</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+           width: 600px;
+           float: none;
+            margin: 50px auto;
+        }
+        .container h1{
+            padding-bottom: 30px;
+        }
+        .menu{
+            width: 100%;
+        }
+        .menu li{
+            list-style: none;
+            float: left;
+            padding-right: 30px;
+            border: 1px solid ;
+        }
+        .menu li:hover{
+            border-bottom: none;
+        }
+        .menu a{
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .show{
+            position: relative;
+        }
+        .show p{
+            padding-top: 10px;
+        }
+        #show-block-1{
+            display: none;
+            width: 347px;
+            height: 50px;
+            float: left;
+            border: 1px solid;
+            border-top: none;
+            position: absolute;
+            top: 23px;
+            left: 0px;
+        }
+        #show-block-2{
+            display: none;
+            width: 347px;
+            height: 50px;
+            float: left;
+            border: 1px solid;
+            border-top: none;
+            position: absolute;
+            top: 23px;
+            left: 0px;
+        }
+        #show-block-3{
+            display: none;
+            width: 347px;
+            height: 50px;
+            float: left;
+            border: 1px solid;
+            border-top: none;
+            position: absolute;
+            top: 23px;
+            left: 0px;
+        }
+        #show-block-4{
+            display: none;
+            width: 347px;
+            height: 50px;
+            float: left;
+            border: 1px solid;
+            border-top: none;
+            position: absolute;
+            top: 23px;
+            left: 0px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Xác  định vị trí trong tabs</h1>
+        <ul class="menu">
+            <li><a href="#" onclick="showHine_1()">Homes</a></li>
+            <li><a href="#" onclick="showHine_2()">Profile</a></li>
+            <li><a href="#" onclick="showHine_3()">Massages</a></li>
+            <li><a href="#" onclick="showHine_4()">Setting</a></li>
+        </ul>
+        <div class="show">
+            <div id="show-block-1">
+                <p>This is Home content</p>
+            </div>
+            <div id="show-block-2">
+                <p>This is Profile content</p>
+            </div>
+            <div id="show-block-3">
+                <p>This is Profile Massages</p>
+            </div>
+            <div id="show-block-4">
+                <p>This is Profile Setting</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function showHine_1(){
+            var sh = document.getElementById("show-block-1");
+            if(sh.style.display == "none"){
+                sh.style.display = "block";
+            }else{
+                sh.style.display = "none";
+            }
+        }
+        function showHine_2(){
+            var sh = document.getElementById("show-block-2");
+            if(sh.style.display == "none"){
+                sh.style.display = "block";
+            }else{
+                sh.style.display = "none";
+            }
+        }
+        function showHine_3(){
+            var sh = document.getElementById("show-block-3");
+            if(sh.style.display == "none"){
+                sh.style.display = "block";
+            }else{
+                sh.style.display = "none";
+            }
+        }
+        function showHine_4(){
+            var sh = document.getElementById("show-block-4");
+            if(sh.style.display == "none"){
+                sh.style.display = "block";
+            }else{
+                sh.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

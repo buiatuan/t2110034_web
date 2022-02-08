@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo JS2</title>
+</head>
+<body>
+    <h1 id="title" class="tit">Object</h1>
+
+    <p id="page">Bên cạnh phong độ, phong thay đồ của MU cũng đang thực sự dậy sóng. Hôm 15/1, HLV Ralf Rangnick cho biết Anthony Martial nghỉ trận MU gặp Aston Villa vì không muốn thi đấu. Ngay lập tức, tiền đạo người Pháp đăng đàn lên trang cá nhân phủ nhận từ chối thi đấu. Điều đó khiến cho nhiều người nghi ngờ rằng mối quan hệ thầy trò giữa hai người đang có vấn đề. Do đó, chiến lược gia người Đức nhiều khả năng sẽ bị cánh phóng viên đặt câu hỏi về vụ việc này trong buổi họp báo hôm nay.</p>
+    <input type="number" min="1" id="input-min" value="number" placeholder="nhap phut" /> <button onclick="timerCodown()" type="button">Run Timer</button>
+
+    <h2><span id="condown">00:00</span></h2>
+    <button onclick="onoff()">ON/OFF</button>
+    <div id="light">
+        LIGHT
+    </div>
+
+    <script type="text/javascript">
+        var obj = {}; // khai bao biến kiểu đối tượng object.attribute = value;
+        obj.nam = "abcscs";
+        obj.age = 28;
+        obj.address = "Kiến Hưng, Hà Đông; Hà Nội";
+        console.log(obj);
+        var obj2 = {  // object ={
+            name:"Bui Anh Tuan",  // attribute:value,
+            age: 28,
+            address: "Hoa Binh",
+            tel: '0859265903',
+            run: function (){
+                console.log(this.name + " Hello world")  // this được gọi là đối tượng ngầm định trong khai báo.
+            }
+        }; // khai báo.
+        console.log(obj2.name);
+        obj2.run();
+        obj2.name = "Le van Luyen";
+        console.log(obj2.name);
+        obj2.run();
+
+        // nếu có 1 đối tượng gióng hệt obj2 thì
+
+        var obj3 = Object.create(obj2); // tạo một đối tượng từ mẫu obj2.
+        obj3.name= "Anh day";
+        obj3.run();
+    </script>
+
+    <script type="text/javascript">
+        function onoff(){
+            var l=document.getElementById("light");
+            if(l.style.display == "none"){
+                l.style.display = "block";
+            }else{
+                l.style.display = "none";
+            }
+        }
+        // viết scrip để tác động đến giao diện
+        // mỗi một phần tử bên html  sẽ luôn có 1 đối tượng (tham chiếu) bên JS
+        // cái mà chúng ta nhìn thấy chính là các giá trị thuộc tính của đối tượng đó.
+        var t = document.getElementById("title"); // DOM element - Documennt object model element
+        // t.style.color = "red";
+        setTimeout(function () {
+            t.style.color = "darkgreen";
+            t.innerText = "Hello T2111E";
+            t.innerHTML += "<i> FPT Aptech</i>";
+            t.classList.add("abcd");
+        },3000);
+        var r = document.getElementById("page");
+        var f = false;
+        setInterval(function (){
+            r.style.backgroundColor = "#3a143e";
+            if (f == false){
+                r.style.color = "red";
+                f = true;
+            }else{
+                r.style.color = "blue";
+                f = false;
+            }
+        },500);
+    function timerCodown(){
+        var ip = document.getElementById("input-min");
+        var min=0, sec=0;
+        min = ip.value; // lấy giá trị của input - textarea - select
+        if(min>0){
+            var time = document.getElementById("condown");
+            var x = setInterval(function (){
+                time.style.backgroundColor = "#63cddb";
+                // toán tử 3 ngôi
+                var m_txt = min<10?"0"+min:min; // bằng hàm ở dưới : ? ==if (: == else)
+                // var m_txt =min;
+                // if(min<10){
+                //     m_txt = "0"+min;
+                // }
+                var sec_txt = sec<10?"0"+sec:sec; // bằng hàm ở dưới
+                // var sec_txt = sec;
+                // if(sec<10){
+                //     sec_txt = "0"+sec;
+                // }
+                time.innerText = m_txt+":"+sec_txt ;
+                sec--;
+                if(sec<0){
+                    sec=59;
+                    min--;
+                }
+                if(min<0){
+                    clearInterval(x);
+                }
+            },1000);
+        }else {
+            alert("Vui long nhap so phut");
+        }
+    }
+
+
+    </script>
+</body>
+</html>

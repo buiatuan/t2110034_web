@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example 1</title>
+
+    <link rel="stylesheet" href="css/example_1.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="form">
+
+        <div class="form-group">
+            <label>Họ và tên</label>
+            <input id="fullname" type="text" class="form-control" onkeyup="typing(this)" name="fullname" placeholder="Họ và tên"/>
+            <p class="notice"></p>
+        </div>
+        <div class="form-group">
+            <label>Điện thoại</label>
+            <input id="tel" type="tel" class="form-control" onkeyup="typing(this)"  name="tel" placeholder="Điện thoại"/>
+            <p class="notice"></p>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input id="email" type="email" class="form-control" onkeyup="typing(this)"  name="email" placeholder="Email"/>
+            <p class="notice"></p>
+        </div>
+        <div class="form-group">
+            <label>Địa chỉ</label>
+            <textarea  id="address" name="address"  class="form-control" onkeyup="typing(this)"  cols="50" rows="5"></textarea>
+            <p class="notice"></p>
+        </div>
+        <div class="form-group">
+            <button type="button" onclick="submit()" class="btn-submit">Submit</button>
+        </div>
+
+    </div>
+    <ol class="list" id="students">
+
+    </ol>
+</div>
+
+<script type="text/javascript" src="js/example_1.js"></script>
+</body>
+</html>

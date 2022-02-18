@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment JS3</title>
+    <link rel="stylesheet" href="vendors/bootstrap3.4.1/css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/font_awesome/css/all.css">
+    <link rel="stylesheet" href="css/assignment_js3.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="row col-md-12">
+        <div id="list-weather">
+            <div class="weather col-md-3">
+                <div class="background-weather">
+                    <div class="col-md-12">
+                        <h4 class="col-md-12 dt_txt">2022-02-17 15:00:00</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h1><span class="temp">27.69</span><sup>o</sup>C</h1>
+                        <p><span class="desc">overcast clouds</span></p>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="icon" src="http://openweathermap.org/img/wn/04n@2x.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="weather col-md-3">
+                <div class="background-weather">
+                    <div class="col-md-12">
+                        <h4 class="col-md-12 dt_txt">2022-02-17 15:00:00</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h1><span class="temp">27.69</span><sup>o</sup>C</h1>
+                        <p><span class="desc">overcast clouds</span></p>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="icon" src="http://openweathermap.org/img/wn/04n@2x.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="weather col-md-3">
+                <div class="background-weather">
+                    <div class="col-md-12">
+                        <h4 class="col-md-12 dt_txt">2022-02-17 15:00:00</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h1><span class="temp">27.69</span><sup>o</sup>C</h1>
+                        <p><span class="desc">overcast clouds</span></p>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="icon" src="http://openweathermap.org/img/wn/04n@2x.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="weather col-md-3">
+                <div class="background-weather">
+                    <div class="col-md-12">
+                        <h4 class="col-md-12 dt_txt">2022-02-17 15:00:00</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h1><span class="temp">27.69</span><sup>o</sup>C</h1>
+                        <p><span class="desc">overcast clouds</span></p>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="icon" src="http://openweathermap.org/img/wn/04n@2x.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="weather col-md-3">
+                <div class="background-weather">
+                    <div class="col-md-12">
+                        <h4 class="col-md-12 dt_txt">2022-02-17 15:00:00</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h1><span class="temp">27.69</span><sup>o</sup>C</h1>
+                        <p><span class="desc">overcast clouds</span></p>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="icon" src="http://openweathermap.org/img/wn/04n@2x.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="weather col-md-3">
+                <div class="background-weather">
+                    <div class="col-md-12">
+                        <h4 class="col-md-12 dt_txt">2022-02-17 15:00:00</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h1><span class="temp">27.69</span><sup>o</sup>C</h1>
+                        <p><span class="desc">overcast clouds</span></p>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="icon" src="http://openweathermap.org/img/wn/04n@2x.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="weather col-md-3">
+                <div class="background-weather">
+                    <div class="col-md-12">
+                        <h4 class="col-md-12 dt_txt">2022-02-17 15:00:00</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h1><span class="temp">27.69</span><sup>o</sup>C</h1>
+                        <p><span class="desc">overcast clouds</span></p>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="icon" src="http://openweathermap.org/img/wn/04n@2x.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="weather col-md-3">
+                <div class="background-weather">
+                    <div class="col-md-12">
+                        <h4 class="col-md-12 dt_txt">2022-02-17 15:00:00</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h1><span class="temp">27.69</span><sup>o</sup>C</h1>
+                        <p><span class="desc">overcast clouds</span></p>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="icon" src="http://openweathermap.org/img/wn/04n@2x.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+    $.ajax({
+        url: "http://api.openweathermap.org/data/2.5/forecast",
+        data:{
+            q:"Hanoi,vietnam",
+            appid:"09a71427c59d38d6a34f89b47d75975c",
+            units:"metric",
+        },
+        method: "GET",
+        success:function (rs){
+            console.log(rs);
+            var products = rs.data;
+            for(var i=0;i<products.length;i++){
+                var p_html = "<div class=\"weather col-md-3\">\n" +
+                    "                <div class=\"background-weather\">\n" +
+                    "                    <div class=\"col-md-12\">\n" +
+                    "                        <h4 class=\"col-md-12 dt_txt\">"+products[i].list.t_txt+"</h4>\n" +
+                    "                    </div>\n" +
+                    "                    <div class=\"col-md-6\">\n" +
+                    "                        <h1><span class=\"temp\">"+products[i].list.main.temp+"</span><sup>o</sup>C</h1>\n" +
+                    "                        <p><span class=\"desc\">"+products[i].list.weather.description+"</span></p>\n" +
+                    "                    </div>\n" +
+                    "                    <div class=\"col-md-6\">\n" +
+                    "                        <img class=\"icon\" src=\""+products[i].list.weather.icon+"\"/>\n" +
+                    "                    </div>\n" +
+                    "                </div>\n" +
+                    "            </div>";
+                $("#list-weather").append(p_html);
+            }
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Current wheather</title>
+    <link rel="stylesheet" href="vendors/bootstrap3.4.1/css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/font_awesome/css/all.css">
+    <link rel="stylesheet" href="css/current_weather.css"/>
+</head>
+<body>
+<div id="list">
+    <select name="city" onchange="changeCity(this)">
+        <option value="hanoi,vn">Hà Nội</option>
+        <option value="saigon,vn">TP HCM</option>
+        <option value="haiphong,vn">Hải Phòng</option>
+        <option value="tokyo,vn">Tokyo</option>
+    </select>
+    <h1 class="city">Hà Nội, Việt Nam</h1>
+    <h2>Nhiệt độ: <span class="temp">21</span> <sup>o</sup>C</h2>
+    <h2>Độ ẩm: <span class="hump">94%</span>%</h2>
+    <h2>Áp suất: <span class="press">1000</span> </h2>
+    <p class="desc">overcast clouds</p>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+    $.ajax({
+        url: "http://api.openweathermap.org/data/2.5/weather",
+        data:{
+            q:"hanoi,vn",
+            appid:"09a71427c59d38d6a34f89b47d75975c",
+            units:"metric",
+        },
+        method:"GET",
+        success:function (rs){
+            console.log(rs);
+            var city = rs.name +", "+rs.sys.country;
+            $(".city").text(city);
+            var tp = rs.main.temp;
+            $(".temp").text(tp);
+            var hmp = rs.main.humidity;
+            $(".hump").text(hmp);
+            $(".press").text(rs.main.pressure);
+            var dsc = "";
+            for(var i=0;i<rs.weather.length;i++){
+                dsc += rs.weather[i].description;
+            }
+            $(".desc").text(dsc);
+        }
+    });
+    function changeCity(e){
+        var v = e.value; // thành phố vừa chọn
+        //gửi ajax vừa chọn lên
+        $.ajax({
+            url: "http://api.openweathermap.org/data/2.5/weather",
+            data:{
+                q:v,
+                appid:"09a71427c59d38d6a34f89b47d75975c",
+                units:"metric",
+            },
+            method:"GET",
+            success:function (rs){
+                console.log(rs);
+                var city = rs.name +", "+rs.sys.country;
+                $(".city").text(city);
+                var tp = rs.main.temp;
+                $(".temp").text(tp);
+                var hmp = rs.main.humidity;
+                $(".hump").text(hmp);
+                $(".press").text(rs.main.pressure);
+                var dsc = "";
+                for(var i=0;i<rs.weather.length;i++){
+                    dsc += rs.weather[i].description;
+                }
+                $(".desc").text(dsc);
+            }
+        });
+    }
+</script>
+</body>
+</html>

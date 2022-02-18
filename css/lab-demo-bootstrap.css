@@ -6,6 +6,10 @@
 body{
     background-color: #f5f4f4;
 }
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
 .top{
     padding: 10px;
     margin-bottom: 10px;

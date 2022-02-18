@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Example 8/2/2022</title>
+    <title>demo bootstrap</title>
     <link rel="stylesheet" href="vendors/bootstrap3.4.1/css/bootstrap.css">
     <link rel="stylesheet" href="vendors/font_awesome/css/all.css">
-    <link rel="stylesheet" href="css/example_8_2_2022.css">
+    <link rel="stylesheet" href="css/lab-demo-bootstrap.css">
 </head>
 <body>
-<div class="page-color">
-    <div class="top col-md-12">
-        <h3>*Featured products</h3>
-    </div>
+<div class="container">
+<div class="top col-md-12">
+    <h3>*Featured products</h3>
+</div>
     <div class="bottom">
-        <div class="row">
+        <div class="row" id="list">
             <div class="product-list col-md-3">
-                <div class="background-product">
+                <!--<div class="background-product">
                     <img src="imgs/labs4_1.jpg" alt="quần short"/>
                     <h3>Hip pants 6</h3>
                     <p>Dolor donec sagittis sapien. Ante aptennt feugiat adipisicing.</p>
@@ -76,10 +76,10 @@
             </div>
             <div class="product-list col-md-3">
                 <div class="background-product">
-                <img src="imgs/labs4_2.jpg" alt="quần short"/>
-                <h3>Hip pants 6</h3>
-                <p>Dolor donec sagittis sapien. Ante aptennt feugiat adipisicing.</p>
-                <h3>$28.49</h3>
+                    <img src="imgs/labs4_2.jpg" alt="quần short"/>
+                    <h3>Hip pants 6</h3>
+                    <p>Dolor donec sagittis sapien. Ante aptennt feugiat adipisicing.</p>
+                    <h3>$28.49</h3>
                 </div>
             </div>
             <div class="product-list col-md-3">
@@ -89,9 +89,37 @@
                     <p>Dolor donec sagittis sapien. Ante aptennt feugiat adipisicing.</p>
                     <h3>$100000</h3>
                 </div>
+            </div>-->
             </div>
         </div>
     </div>
 </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+        // dùng ajax để lấy dữ liệu
+        $.ajax({
+           // trong này là 1 đối tượng
+           url:"https://foodgroup.herokuapp.com/api/today-special" ,
+           method:"GET",
+           success:function (rs){// hàm callback để nhận dữ liệu khi truy vấn thành công
+               console.log(rs);
+               var products = rs.data;
+               for(var i=0;i<products.length;i++){
+                   // nạp từng sản phẩm lên giao diện phía trên
+                   var p_html = "<div class=\"product-list col-md-3\">\n" +
+                       "                <div class=\"background-product\">\n" +
+                       "                    <img src=\""+products[i].image+"\" alt=\"quần short\"/>\n" +
+                       "                    <h3>"+products[i].name+"</h3>\n" +
+
+                       "                    <h3>"+products[i].price+"</h3>\n" +
+                       "                </div>\n" +
+                       "            </div>";
+                   $("#list").append(p_html);
+               }
+           }
+        });
+
+
+    </script>
 </body>
 </html>

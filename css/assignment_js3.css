@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1200px;
+    float: none;
+    margin: 30px auto;
+}
+.row{
+    padding: 0;
+}
+#list-weather{
+    width: 100%;
+    float: left;
+}
+.weather{
+    padding: 10px;
+}
+.background-weather{
+    width: 100%;
+    float: left;
+    padding: 5px;
+    margin: 0;
+    background-color: #bbc5cc;
+}
+.background-weather h4{
+    padding: 0;
+    margin: 10px 0;
+    font-size: 20px;
+    text-align: left;
+}

@@ -12,7 +12,7 @@
 <div class="container">
     <div class="row col-md-12">
         <div id="list-weather">
-            <div class="weather col-md-3">
+            <!--<div class="weather col-md-3">
                 <div class="background-weather">
                     <div class="col-md-12">
                         <h4 class="col-md-12 dt_txt">2022-02-17 15:00:00</h4>
@@ -123,7 +123,7 @@
                         <img class="icon" src="http://openweathermap.org/img/wn/04n@2x.png"/>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </div>
@@ -141,24 +141,31 @@
             console.log(rs);
             var products = rs.list;
             for(var i=0;i<products.length;i++){
+                var date = products[i].dt_txt;
+                var tmp = products[i].main.temp;
+                var dsc = products[i].weather[0].description;
+                var icon = products[i].weather[0].icon;
+
                 var p_html = "<div class=\"weather col-md-3\">\n" +
                     "                <div class=\"background-weather\">\n" +
                     "                    <div class=\"col-md-12\">\n" +
-                    "                        <h4 class=\"col-md-12 dt_txt\">"+products[i].dt_txt+"</h4>\n" +
+                    "                        <h4 class=\"col-md-12 dt_txt\">"+date+"</h4>\n" +
                     "                    </div>\n" +
                     "                    <div class=\"col-md-6\">\n" +
-                    "                        <h1><span class=\"temp\">"+products[i].main.temp+"</span><sup>o</sup>C</h1>\n" +
-                    "                        <p><span class=\"desc\">"+products[i].weather.description+"</span></p>\n" +
+                    "                        <h1><span class=\"temp\">"+tmp+"</span><sup>o</sup>C</h1>\n" +
+                    "                        <p><span class=\"desc\">"+dsc+"</span></p>\n" +
                     "                    </div>\n" +
                     "                    <div class=\"col-md-6\">\n" +
-                    "                        <img class=\"icon\" src=\""+products[i].weather.icon+"\"/>\n" +
+                    "                        <img class=\"icon\" src=\"http://openweathermap.org/img/wn/"+icon+"@2x.png\"/>\n" +
                     "                    </div>\n" +
                     "                </div>\n" +
                     "            </div>";
                 $("#list-weather").append(p_html);
             }
         }
+
     });
+
 </script>
 </body>
 </html>

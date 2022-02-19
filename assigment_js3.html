@@ -144,6 +144,10 @@
                 var date = products[i].dt_txt;
                 var tmp = products[i].main.temp;
                 var dsc = products[i].weather[0].description;
+               /* var dsc = "";
+                for(var i=0;i<products.weather.length;i++){
+                    dsc += products.weather[i].description;  //
+                }*/
                 var icon = products[i].weather[0].icon;
 
                 var p_html = "<div class=\"weather col-md-3\">\n" +

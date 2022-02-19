@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Map</title>
+<style>
+    #map{
+        width: 500px;
+        height: 400px;
+    }
+</style>
+
+</head>
+
+<body>
+<div id="map"></div>
+
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWTx7bREpM5B6JKdbzOvMW-RRlhkukmVE&callback=initMap&v=weekly"
+        async
+></script>
+<script type="text/javascript">
+    var map;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 21.0288058, lng: 105.7804978 },
+            zoom: 14,
+        });
+    }
+</script>
+</body>
+</html>

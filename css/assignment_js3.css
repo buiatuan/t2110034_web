@@ -3,6 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    background-image: url("../imgs/weather_background.jpg");
+    background-size: cover;
+}
 .container{
     width: 1200px;
     float: none;

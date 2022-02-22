@@ -16,10 +16,17 @@
 <div id="page">
     <div class="page-color col-md-12">
         <div class="top col-md-12">
-            <h3 class="text-uppercase"><i class="fas fa-star-of-life"></i> Featured products</h3>
+            <h3 class="text-uppercase col-md-10"><i class="fas fa-star-of-life"></i> Featured products</h3>
+            <select class="change-foods col-md-2" name="chose-foods" onchange="changeFoods(this)">
+                <option value="1">Burger</option>
+                <option value="2">Chicken</option>
+                <option value="3">Rice</option>
+                <option value="4">Drinks</option>
+                <option value="5">Dessert</option>
+            </select>
         </div>
         <div id="bottom" class="col-md-12">
-            <div class="black col-md-3">
+            <!--<div class="black col-md-3">
                 <div class="background">
                     <img src="imgs/labs4_2.jpg" alt="quần short"/>
                     <h3 class="text-uppercase">Hip pants 6</h3>
@@ -106,7 +113,7 @@
                         <h3 class="text-uppercase">product denjls</h3>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </div>
@@ -117,13 +124,56 @@
         method:"get",
         success:function (rs){
             console.log(rs);
-            var products = rs.data.foods;
-            for(var i=0;i<products.length;i++){
-
-
+            var products = rs.data;
+            for(var i=0;i<products.foods.length;i++){
+                var img = products.foods[i].image;
+                var name = products.foods[i].name;
+                var pri = products.foods[i].price;
+                var des = products.foods[i].description;
+                var p_html = "<div class=\"black col-md-3\">\n" +
+                    "                <div class=\"background\">\n" +
+                    "                    <img src=\""+img+"\" alt=\"quần short\"/>\n" +
+                    "                    <h3 class=\"text-uppercase\">"+name+"</h3>\n" +
+                    "                    <p>"+des+"</p>\n" +
+                    "                    <h3>$"+pri+"</h3>\n" +
+                    "                    <div class=\"content\">\n" +
+                    "                        <h3 class=\"text-uppercase\">product denjls</h3>\n" +
+                    "                    </div>\n" +
+                    "                </div>\n" +
+                    "            </div>";
+                $("#bottom").append(p_html);
             }
         }
     });
+    function changeFoods(e){
+        var v = e.value;
+        $.ajax({
+            url:"https://foodgroup.herokuapp.com/api/category/"+v+"",
+            method:"get",
+            success:function (rs){
+                console.log(rs);
+                var products = rs.data;
+                for(var i=0;i<products.foods.length;i++){
+                    var img = products.foods[i].image;
+                    var name = products.foods[i].name;
+                    var pri = products.foods[i].price;
+                    var des = products.foods[i].description;
+                    var p_html = "<div class=\"black col-md-3\">\n" +
+                        "                <div class=\"background\">\n" +
+                        "                    <img src=\""+img+"\" alt=\"quần short\"/>\n" +
+                        "                    <h3 class=\"text-uppercase\">"+name+"</h3>\n" +
+                        "                    <p>"+des+"</p>\n" +
+                        "                    <h3>$"+pri+"</h3>\n" +
+                        "                    <div class=\"content\">\n" +
+                        "                        <h3 class=\"text-uppercase\">product denjls</h3>\n" +
+                        "                    </div>\n" +
+                        "                </div>\n" +
+                        "            </div>";
+                    $("#bottom").append(p_html);
+                }
+            }
+        });
+    }
 </script>
 </body>
 </html>

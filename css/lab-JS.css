@@ -22,6 +22,7 @@ img{
     margin: 5px;
 }
 .change-foods{
+    float: right;
     padding: 5px;
     margin: 13px 0;
     background-color: #efebeb;
@@ -36,7 +37,8 @@ img{
     background-color: #ffffff;
     box-shadow: 0 1px 3px 1px grey;
     text-align: center;
-    height: 350px;
+    height: 330px;
+    overflow: hidden;
     position: relative;
 }
 .content{
